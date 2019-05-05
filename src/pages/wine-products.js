@@ -9,16 +9,18 @@ export default function WineProducts({data}) {
 
  return (
     <Layout>
+     <h1>Things We Sell:</h1>
       {data.wines.edges.map(({node:wine})=> (
         <div key={wine.id} style={{padding: '1rem', margin: '1rem 0'}}>
-         <h3>Product Photo:</h3>
-        <div style={{maxWidth: '300px', marginBottom: '1rem' }}>
          
-        <Img fixed={wine.image.fixed} />
+        <div style={{maxWidth: '250px', marginBottom: '1rem' }}>
+         <Img fixed={wine.image.fixed} />
         </div>
           <span style={{marginRight: '1rem'}}><strong>Product:</strong> {wine.title} </span>
           <span><strong>Price:</strong> ${wine.price}</span>
-        <p style={{marginTop: '1rem', width: '400px'}}>Description: {wine.description.description}</p>
+        <Link to={`/products/${wine.title}`}>
+         <h3>Details</h3>
+        </Link>
         
         
         </div>
