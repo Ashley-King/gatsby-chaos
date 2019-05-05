@@ -44,6 +44,7 @@ const Layout = ({ children }) => (
           <li className='nav-item'><a href="/page-2/">Page 2</a></li>
           <li className='nav-item'><a href="/products/testing/">Testing</a></li>
           <li className='nav-item'><a href="/images/">Images</a></li>
+          <li className='nav-item'><a href="/wine-products/">Products</a></li>
         </ul>
         </nav>
         
